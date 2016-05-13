@@ -2,6 +2,13 @@
   <tr>
     <th>Applicant</th>
     <th>Day of the Week</th>
-    
+    <th>Location</th>
   </tr>
+  <% @schedules.each do |schedule| %>
+    <tr>
+      <td><%= schedule["applicant"] %></td>
+      <td><%= schedule["dayofweekstr"] %></td>
+      <td><%= schedule["locationdesc"] %></td>
+    </tr>
+    <% end %>
 </table>
